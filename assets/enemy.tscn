@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgtdksbig20ee"]
+
+[ext_resource type="Texture2D" uid="uid://c1aecxjtpkkqg" path="res://icon.svg" id="1_v76rc"]
+[ext_resource type="Script" path="res://assets/scritpts/enemy.gd" id="2_gd6an"]
+
+[node name="character" type="Sprite2D"]
+position = Vector2(216, 176)
+texture = ExtResource("1_v76rc")
+script = ExtResource("2_gd6an")
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="hp" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 64.0
+offset_right = 40.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 30
+text = "10"

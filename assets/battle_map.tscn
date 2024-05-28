@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://difinu6vknkqt"]
+
+[ext_resource type="Texture2D" uid="uid://bx26a75361j4g" path="res://assets/backgrounds/place_holder.png" id="1_nai1q"]
+[ext_resource type="Script" path="res://assets/scritpts/battle_map.gd" id="1_s5777"]
+[ext_resource type="PackedScene" uid="uid://desw4y0mphrii" path="res://assets/character.tscn" id="3_twpp4"]
+[ext_resource type="PackedScene" uid="uid://bgtdksbig20ee" path="res://assets/enemy.tscn" id="4_ytc4i"]
+
+[node name="BattleMap" type="Node2D"]
+script = ExtResource("1_s5777")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.547786, 0.438775)
+texture = ExtResource("1_nai1q")
+
+[node name="character" parent="." instance=ExtResource("3_twpp4")]
+position = Vector2(512, 680)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 88.0
+offset_top = 928.0
+offset_right = 357.0
+offset_bottom = 1032.0
+theme_override_font_sizes/font_size = 70
+text = "ATTACK"
+
+[node name="enemy" parent="." instance=ExtResource("4_ytc4i")]
+position = Vector2(1112, 680)
