@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cycgmib35o141"]
+
+[ext_resource type="Texture2D" uid="uid://6s0oey4bm8yl" path="res://assets/backgrounds/steppes.png" id="1_15pht"]
+[ext_resource type="Script" path="res://battle_map.gd" id="1_v6jgf"]
+[ext_resource type="PackedScene" uid="uid://fwjx5x2igjwr" path="res://assets/characters/wolf.tscn" id="2_20w1i"]
+
+[node name="BattleMap" type="Node"]
+script = ExtResource("1_v6jgf")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_15pht")
+
+[node name="GameInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Wolf" parent="." instance=ExtResource("2_20w1i")]
+position = Vector2(352, 688)
+
+[node name="Wolf2" parent="." instance=ExtResource("2_20w1i")]
+position = Vector2(1240, 688)

@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://fwjx5x2igjwr"]
+
+[ext_resource type="Script" path="res://assets/characters/character.gd" id="1_prcib"]
+[ext_resource type="Texture2D" uid="uid://ccslhp01uy6lo" path="res://assets/characters/textures/wolf.png" id="2_tgeef"]
+
+[node name="Wolf" type="Node2D"]
+script = ExtResource("1_prcib")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_tgeef")
+
+[node name="Interface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(15.12, 10.32)
+
+[node name="HP" type="Label" parent="Interface"]
+layout_mode = 0
+offset_left = -4.2328
+offset_top = 13.1783
+offset_right = 35.7672
+offset_bottom = 36.1783
+scale = Vector2(0.186369, 0.221652)
+text = "10"
+
+[node name="AttackButton" type="Button" parent="Interface"]
+layout_mode = 0
+offset_left = -13.2275
+offset_top = -3.10078
+offset_right = 54.7725
+offset_bottom = 27.8992
+scale = Vector2(0.0682383, 0.108689)
+text = "ATTACK"
